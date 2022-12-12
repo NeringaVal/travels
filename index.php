@@ -1,3 +1,5 @@
+<?php include "./routes.php" ?>;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

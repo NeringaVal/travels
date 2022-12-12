@@ -1,6 +1,6 @@
 <?php
 
-clas DB {
+class DB {
 
     public $conn;
 
@@ -10,7 +10,7 @@ clas DB {
         $username = "root";
         $password = "";
         $db ="webkurasi_travels";
-        $yhis->conn = new mysqli($servername, $username, $password, $db);
+        $this->conn = new mysqli($servername, $username, $password, $db);
     }
 
 
