@@ -17,11 +17,11 @@
                 <form action="" method="post">
 
                     <div class="form-group">
-                        <label  class="form-label">Kelionės pavadinimas</label>
+                        <label>Kelionės pavadinimas</label>
                         <input type="text" class="form-control" name="Title" placeholder="Pvz Londonas">
                     </div>
                     <div class="form-group">
-                        <label  class="form-label">Kaina</label>
+                        <label">Kaina</label>
                         <input type="number" class="form-control" name="price" placeholder="Pvz 100.00">
                     </div>
                     <div class="form-check">

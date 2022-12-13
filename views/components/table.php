@@ -14,8 +14,13 @@
             <td><?=$travel->travelTitle?></td>
             <td><?=$travel->price?></td>
             <td><?= ($travel->organized) ? "Taip" : "Ne" ?></td>
-            <td><button class="btn btn-success" name="update" type="submit" >Redaguoti</button></td>
-            <form action="" method="post">
+            <form action="" method="GET">
+                <input type="hidden" name="id" value="<?=$travel->id?>">
+                <td><button class="btn btn-success" name="edit" type="submit" >Redaguoti</button></td>
+            </form>
+            
+            <form action="" method="POST">
+                <input type="hidden" name="id" value="<?=$travel->id?>">
                 <td><button class="btn btn-danger" name="destroy" type="submit">Trinti</button></td>
             </form>
             
