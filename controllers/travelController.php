@@ -7,19 +7,21 @@ class TravelController {
     public static function index()
     {
         $travels = Travel::all();
-        return $travel;
+        return $travels;
     }
 
+    public static function store()
+    {
+        //validacija
+        Travel::create();
+    }
+
+
+
+
+
+
 }
-
-
-
-
-
-
-
-
-
 
 
 ?>

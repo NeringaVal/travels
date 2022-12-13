@@ -31,6 +31,17 @@ class Travel {
         return $travels;
     }
 
+    public static function create()
+    {
+       $db = new DB();
+       $isOrganized = (isset($_POST[`isOrganized`])) ? "1" : "0";
+       $stmt = $db->conn->prepare("INSERT INTO `travels`(`id`, `price`, `travel_title`, `organized`) VALUES (null,?,?,?)");
+       $stmt->bind_param("dsi", $_POST[`price`], $_POST[`Title`], $isOrganized);
+       $stmt->execute();
+       $stmt->close();
+       $db->conn->close();
+    }
+
 
 
 }
