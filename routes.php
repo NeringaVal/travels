@@ -27,10 +27,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     
 }
 
+$checked = "";
 if($_SERVER['REQUEST_METHOD'] == "GET"){
 
     if(isset($_GET['edit'])){
-        $travels = TravelController::show();
+        $travel = TravelController::show();
+        if($travel->organized){
+            $checked = "checked";
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-<?php include "./routes.php" ?>;
+<?php include "./routes.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,15 +18,15 @@
 
                     <div class="form-group">
                         <label>Kelionės pavadinimas</label>
-                        <input type="text" class="form-control" name="Title" placeholder="Pvz Londonas">
+                        <input type="text" class="form-control" name="Title" placeholder="Pvz Londonas" value="<?=(isset($_GET['edit'])) ? $travel->travelTitle : ""?>">
                     </div>
                     <div class="form-group">
                         <label">Kaina</label>
-                        <input type="number" class="form-control" name="price" placeholder="Pvz 100.00">
+                        <input type="number" class="form-control" name="price" placeholder="Pvz 100.00" value="<?=(isset($_GET['edit'])) ? $travel->price : ""?>">
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" name="isOrganized" id="travel">
-                        <label class="form-check-label" for="travel" >Ar šiuo metu vykdoma</label>
+                        <input type="checkbox" <?=$checked?> class="form-check-input" name="isOrganized" id="travel">
+                        <label class="form-check-label" for="travel" >Ar šiuo metu vykdoma</label> 
                     </div>
                     <button class="btn btn-success" name="save" type="submit" >Išsaugoti</button>
                 </form> 
