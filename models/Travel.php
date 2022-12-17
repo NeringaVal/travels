@@ -59,6 +59,18 @@ class Travel {
        $stmt->close();
        $db->conn->close();
     }
+
+    public function update()
+    {
+        $db = new DB();
+        $stmt = $db->conn->prepare("UPDATE `travels` SET `price`=?,`travel_title`=?,`organized`= ? WHERE `id` = ?");
+        $stmt->bind_param("dsii",$this->price, $this->travelTitle, $this->organized, $this->id );
+        $stmt->execute();
+
+        $stmt->close();
+        $db->conn->close();
+    }
+   
     public static function destroy()
     {
        $db = new DB();
@@ -68,15 +80,7 @@ class Travel {
        $stmt->close();
        $db->conn->close();
     }
-    public static function update()
-    {
-       $db = new DB();
-       $stmt = $db->conn->prepare("DELETE FROM `travels` WHERE `id` = ?");
-       $stmt->bind_param("i", $_POST['id']);
-       $stmt->execute();
-       $stmt->close();
-       $db->conn->close();
-    }
+    
 
 
 }

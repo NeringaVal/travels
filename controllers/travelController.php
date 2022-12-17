@@ -21,15 +21,19 @@ class TravelController {
         //validacija
         Travel::create();
     }
+
     public static function update()
     {
+        $isOrganized = (isset($_POST['isOrganized'])) ? "1" : "0";
         $travel = new Travel();
         $travel->id = $_POST['id'];
-        $travel->travelTitle = $_POST['title'];
+        $travel->travelTitle = $_POST['Title'];
         $travel->price = $_POST['price'];
-        $travel->organized = $_POST['isOrganized'];
+        $travel->organized = $isOrganized;
         $travel->update();
     }
+
+    
     public static function destroy()
     {
         //validacija
