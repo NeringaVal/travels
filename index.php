@@ -1,5 +1,4 @@
 <?php include "./routes.php"; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +14,6 @@
         <div class="row">
             <div class="col-6 mb-4 mt-4" >
                 <form action="" method="post">
-
                     <div class="form-group">
                         <label>Kelionės pavadinimas</label>
                         <input type="text" class="form-control" name="Title" placeholder="Pvz Londonas" value="<?=(isset($_GET['edit'])) ? $travel->travelTitle : ""?>">
@@ -42,6 +40,5 @@
         <?php include "./views/components/table.php"; ?>
         </table>
     </div>
-
 </body>
 </html>
