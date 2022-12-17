@@ -1,5 +1,5 @@
 <thead>
-        <tr>
+        <tr  class="table-dark">
      
             <th scope="col">Pavadinimas</th>
             <th scope="col">Kaina</th>
@@ -10,7 +10,7 @@
     </thead>
     <tbody>
         <?php foreach ($travels as $travel) {?>
-        <tr>
+        <tr class="table-light">
             <td><?=$travel->travelTitle?></td>
             <td><?=$travel->price?></td>
             <td><?= ($travel->organized) ? "Taip" : "Ne" ?></td>

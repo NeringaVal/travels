@@ -4,7 +4,7 @@
 <head>
     <?php include "./views/components/head.php" ?>
 </head>
-<body>
+<body >
     <header> 
     <nav class="navbar navbar-expand-lg bg-light">
         <?php include "./views/components/nav.php" ?>
@@ -12,7 +12,8 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-6 mb-4 mt-4" >
+            <div class="col-1"></div>
+            <div class="col-5 mb-4 mt-4" >
                 <form action="" method="post">
                     <div class="form-group">
                         <label>Kelionės pavadinimas</label>
@@ -34,11 +35,23 @@
                     <?Php } ?>
                 </form> 
             </div>
-            <div class="col-6"></div>
+            <div class="col-5 m-5" >
+                <img src="./img/img2.jpg" alt="Travel" width="250" height="300">
+            </div>
+            <div class="col-1"></div>
         </div>  
-        <table class="table">
-        <?php include "./views/components/table.php"; ?>
-        </table>
+        <div class="container">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <table class="table">
+                    <?php include "./views/components/table.php"; ?>
+                    </table>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
