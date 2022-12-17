@@ -28,7 +28,12 @@
                         <input type="checkbox" <?=$checked?> class="form-check-input" name="isOrganized" id="travel">
                         <label class="form-check-label" for="travel" >Ar šiuo metu vykdoma</label> 
                     </div>
-                    <button class="btn btn-success" name="save" type="submit" >Išsaugoti</button>
+                    <?php if(!isset($_GET['edit'])) {?>
+                        <button class="btn btn-success" name="save" type="submit" >Išsaugoti</button>
+                    <?php } else {?>
+                        <input type="hidden" name="id" value="<?=$travel->id?>">
+                        <button class="btn btn-primary" name="update" type="submit" >Atnaujinti</button>
+                    <?Php } ?>
                 </form> 
             </div>
             <div class="col-6"></div>

@@ -68,6 +68,15 @@ class Travel {
        $stmt->close();
        $db->conn->close();
     }
+    public static function update()
+    {
+       $db = new DB();
+       $stmt = $db->conn->prepare("DELETE FROM `travels` WHERE `id` = ?");
+       $stmt->bind_param("i", $_POST['id']);
+       $stmt->execute();
+       $stmt->close();
+       $db->conn->close();
+    }
 
 
 }
